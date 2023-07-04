@@ -1,15 +1,5 @@
 #Arquivos e pastas que devem ser ignorados
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 node_modules
 .env
-=======
 node_modules/
-.env/
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
-=======
-node_modules/
-.env/
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
-serve.rest
