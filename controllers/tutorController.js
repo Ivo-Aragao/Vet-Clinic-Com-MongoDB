@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 const Tutor = require("../models/tutor");
-=======
 const Tutor = require("../models/Tutor");
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
-=======
 const Tutor = require("../models/Tutor");
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
 const Pet = require("../models/pet");
 const jwt = require('jsonwebtoken');
 
@@ -114,24 +108,13 @@ async function deleteTutor(req, res) {
   
       await Tutor.findByIdAndDelete(id);
       
-<<<<<<< HEAD
-<<<<<<< HEAD
       res.status(204).end();
-
-=======
-      res.status(204).json({ msg: "Tutor deletado com sucesso" });
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
-=======
-      res.status(204).json({ msg: "Tutor deletado com sucesso" });
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
+    
     } catch (error) {
       console.error('Erro ao excluir o tutor:', error);
       res.status(401).json({ msg: 'Não autorizado' });
     }
   }
-  
-  
-  
   
 module.exports = {
   getAllTutors,
