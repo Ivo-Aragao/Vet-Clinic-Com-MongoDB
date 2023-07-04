@@ -1,0 +1,215 @@
+swagger: "2.0"
+info:
+  version: "1.0.0"
+  title: "API Documentation"
+paths:
+  /tutors:
+    get:
+      summary: "Obter todos os tutores"
+      description: "Endpoint para obter todos os tutores"
+      security:
+        - BearerAuth: []
+      responses:
+        200:
+          description: "Operação bem-sucedida"
+  /tutor:      
+    post:
+      summary: "Criar um novo tutor"
+      description: "Endpoint para criar um novo tutor"
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              password:
+                type: string
+              phone:
+                type: string
+              email:
+                type: string
+              date_of_birth:
+                type: string
+              zip_code:
+                type: string
+      responses:
+        201:
+          description: "Tutor criado com sucesso"
+  /tutor/{id}:
+    put:
+      summary: "Atualizar tutor por ID"
+      description: "Endpoint para atualizar um tutor existente"
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              phone:
+                type: string
+              email:
+                type: string
+              date_of_birth:
+                type: string
+              zip_code:
+                type: string
+      responses:
+        200:
+          description: "Tutor atualizado com sucesso"
+    delete:
+      summary: "Excluir tutor por ID"
+      description: "Endpoint para excluir um tutor existente"
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: id
+          in: path
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Tutor excluído com sucesso"
+  /pet/{tutorId}:
+    post:
+      summary: "Adicionar um pet a um tutor"
+      description: "Endpoint para adicionar um novo pet a um tutor"
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: tutorId
+          in: path
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              species:
+                type: string
+              carry:
+                type: string
+              weight:
+                type: number
+              date_of_birth:
+                type: string
+      responses:
+        201:
+          description: "Pet adicionado ao tutor com sucesso"
+  /pet/{petId}/tutor/{tutorId}:
+    put:
+      summary: "Atualizar pet por ID do tutor e ID do pet"
+      description: "Endpoint para atualizar um pet de um tutor existente"
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: tutorId
+          in: path
+          required: true
+          type: string
+        - name: petId
+          in: path
+          required: true
+          type: string
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              species:
+                type: string
+              carry:
+                type: string
+              weight:
+                type: number
+              date_of_birth:
+                type: string
+      responses:
+        200:
+          description: "Pet atualizado com sucesso"
+    delete:
+      summary: "Excluir pet por ID do tutor e ID do pet"
+      description: "Endpoint para excluir um pet de um tutor existente"
+      security:
+        - BearerAuth: []
+      parameters:
+        - name: tutorId
+          in: path
+          required: true
+          type: string
+        - name: petId
+          in: path
+          required: true
+          type: string
+      responses:
+        204:
+          description: "Pet excluído com sucesso"
+  /user/register:
+    post:
+      summary: "Registrar um novo usuário"
+      description: "Endpoint para registrar um novo usuário"
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+              password:
+                type: string
+      responses:
+        200:
+          description: "Usuário registrado com sucesso"
+<<<<<<< HEAD
+<<<<<<< HEAD
+  /user/auth:
+=======
+  /user/login:
+>>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
+=======
+  /user/login:
+>>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
+    post:
+      summary: "Autenticar um usuário e gerar token"
+      description: "Endpoint para autenticar um usuário e gerar o token de autenticação"
+      parameters:
+        - name: body
+          in: body
+          required: true
+          schema:
+            type: object
+            properties:
+              email:
+                type: string
+              password:
+                type: string
+      responses:
+        200:
+          description: "Autenticação bem-sucedida"
+securityDefinitions:
+  BearerAuth:
+    type: apiKey
+    name: Authorization
+    in: header
