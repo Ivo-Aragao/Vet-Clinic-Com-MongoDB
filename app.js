@@ -20,16 +20,9 @@ mongoose
   })
   .then(() => {
     console.log('Conectado ao MongoDB');
-
-<<<<<<< HEAD
-<<<<<<< HEAD
     app.get('/', (req, res) => {
       res.send('Bem-vindo VetClinic API!');
     });
-=======
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
-=======
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
 
     app.get('/tutors', tutorController.getAllTutors);
     app.post('/tutor', tutorController.createTutor);
@@ -40,16 +33,8 @@ mongoose
     app.put('/pet/:petId/tutor/:tutorId', petController.updatePet);
     app.delete('/pet/:petId/tutor/:tutorId', petController.deletePet);
 
-<<<<<<< HEAD
-<<<<<<< HEAD
     app.post("/register", userController.registerUser);
     app.post("/auth", userController.loginUser);
-=======
-    app.use('/user', userController);
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
-=======
-    app.use('/user', userController);
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
 
     app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
