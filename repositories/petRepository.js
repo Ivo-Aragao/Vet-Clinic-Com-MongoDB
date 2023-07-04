@@ -1,5 +1,5 @@
 const Pet = require('../models/pet');
-/
+
 async function getPetById(id) {
   return await Pet.findById(id);
 }
