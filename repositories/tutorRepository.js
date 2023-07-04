@@ -1,6 +1,4 @@
 const Tutor = require("../models/tutor");
-const Tutor = require("../models/Tutor");
-const Tutor = require("../models/Tutor");
 
 async function find() {
   return Tutor.find();
