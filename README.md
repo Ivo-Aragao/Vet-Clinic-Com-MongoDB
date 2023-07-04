@@ -20,6 +20,7 @@ Tecnologias utilizadas
 1. Crie um arquivo `.env` no diretório raiz do projeto.
 2. Defina as seguintes variáveis de ambiente no arquivo `.env`:
    - `DB_URL`: URL de conexão com o MongoDB.
+   -  ACCESS_TOKEN_SECRET: segredo para usar tokens JWT.
    - `JWT_SECRET`: Segredo usado para assinar os tokens JWT.
 
 ## Uso
