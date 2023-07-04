@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 const User = require("../models/user");
@@ -64,9 +62,7 @@ async function loginUser(req, res) {
 }
 
 module.exports = { registerUser, loginUser };
-=======
-=======
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
+
 const express = require("express");
 const router = express.Router();
 const userService = require("../services/userService");
@@ -76,7 +72,3 @@ router.post("/register", userService.registerUser);
 router.post("/login", userService.loginUser);
 
 module.exports = router;
-<<<<<<< HEAD
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
-=======
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
