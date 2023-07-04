@@ -1,19 +1,11 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 const Tutor = require("../models/tutor");
 const jwt = require('jsonwebtoken');
 const Pet = require("../models/pet");
-=======
-=======
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
+
 const Tutor = require("../models/Tutor");
 const jwt = require('jsonwebtoken');
 const Pet = require("../models/pet");
 const petRepository = require('../repositories/petRepository');
-<<<<<<< HEAD
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
-=======
->>>>>>> 7dcf465d79c9d21d48de9665f334d03d79419da6
 
 function verifyToken(req) {
   const authorizationHeader = req.headers.authorization;
