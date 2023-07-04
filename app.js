@@ -6,7 +6,7 @@ require('dotenv').config();
 const mongoose = require('mongoose');
 const swaggerUi = require('swagger-ui-express');
 const YAML = require('yamljs');
-/
+
 const app = express();
 const port = 3000;
 const swaggerDocument = YAML.load('./swagger.yaml');
