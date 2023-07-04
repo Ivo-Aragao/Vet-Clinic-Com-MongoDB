@@ -1,7 +1,7 @@
 const Tutor = require("../models/tutor");
 const jwt = require('jsonwebtoken');
 const Pet = require("../models/pet");
-/
+
 function verifyToken(req) {
   const authorizationHeader = req.headers.authorization;
   if (authorizationHeader) {
