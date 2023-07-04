@@ -1,5 +1,5 @@
 const Tutor = require("../repositories/tutorRepository");
-/
+
 async function addPetToTutor(tutorId, data) {
   const tutor = await Tutor.findById(tutorId);
 
