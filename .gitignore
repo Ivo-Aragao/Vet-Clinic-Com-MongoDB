@@ -1,0 +1,5 @@
+#Arquivos e pastas que devem ser ignorados
+dist
+node_modules
+.env
+serve.rest
